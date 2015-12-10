@@ -1,5 +1,7 @@
 #include <stdio.h>
-/*
+/***************
+redirection
+***************
 input redirection:
 	./a.out < input.txt
 output redirection:
