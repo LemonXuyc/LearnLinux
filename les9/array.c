@@ -10,10 +10,14 @@ int main()
     int a = 3;
     int b = 4;
     int array[3];
-    array[0] = 1;
-    array[1] = 10;
-    array[2] = 100;
+    int *pa = array;
+    pa[0] = 1;
+    pa[1] = 10;
+    pa[2] = 100;
+
     int *p = &a;
+    p[4] = 101;
+    p = &a;
     int i;
     for(i = 0; i < 7; i++){
         printf("*p = %d\n", *p);
