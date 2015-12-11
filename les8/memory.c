@@ -1,4 +1,23 @@
 #include <stdio.h>
+/********************************
+    the structure of memory
+*********************************
+system kernel	high address
+stack segment
+customing
+heap segment
+data segment
+code segment	low address
+********************************
+an example of pointer :  if
+	int a = 3;
+	int *pa = a;    then:
+
+p a :the value of a;
+p &a :the address of a;
+p pa :the address of pa == &a;
+p *pa :the value of a;
+***********************************/
 int global = 0;
 
 int rect(int a, int b)
@@ -26,7 +45,9 @@ int main()
 	int *pa = &a;
 	int *pb = &b;
 	int *pglobal = &global;
-	int s = quadrate(a);
+	int (*pquadrate)(int a) = &quadrate;
+       	//int s = quadrate(a);
+	int s = (*pquadrate)(a);
 	printf("%d\n", s);
 	return 0;
 }
