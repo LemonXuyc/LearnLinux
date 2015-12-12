@@ -6,7 +6,9 @@ gdb:
 int main()
 {
     char str[] = "hello";
-    char *str2 = "world";
+    char *str2 = "world";//str2 is a character constant, and 
+			// it cannot be written again for it is 
+			// in code segment.
     char str3[10];
     printf("input the value \n");
     scanf("%s", str3);   //scanf not with *str3;
